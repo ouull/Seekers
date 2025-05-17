@@ -1,0 +1,78 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f8f9fc;
+    color: #333;
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin: 0;
+    color: #500e0e;
+  }
+  
+  /* Overview Boxes */
+  .overview-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  
+  .overview-box {
+    background: linear-gradient(135deg, #500e0e, #8c1515);
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+  
+  .overview-box h2 {
+    margin: 0 0 10px;
+    font-size: 18px;
+  }
+  
+  .overview-box .value {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .overview-box .date {
+    margin-top: 10px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  /* Charts */
+  .chart-section {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .chart-container {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  .chart-container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  

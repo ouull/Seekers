@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Seekers Login</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="style/login.css"/>
+    
+</head>
+<body>
+
+<div class="header">
+    <div class="logo"><img alt="Logo" height="25" src="asset/Seekersss.png" width="168"/>
+    </div>
+    <div class="nav">
+        <div>Seekers Whoosh - PT Kereta Cepat Indonesia China</div>
+    </div>
+    <!-- <div class="language">English <i class="fas fa-chevron-down"></i></div> -->
+    <a href="#">Contact</a>
+    <a href="#">About</a>
+</div>
+
+<div class="container">
+    <div class="form-box">
+        <h2 id="form-title">Login</h2>
+        
+        <form action="login.php" method="POST" id="login-form" cla>
+            <input type="text" name="email" placeholder="Email " required/>
+            <input type="password" name="password" placeholder="Password" required/>
+            <button type="submit">Log In</button>
+            <div class="switch-container">
+                <p>Don't have an account? </p><p class="switch" onclick="switchForm('register')"> Register</p>
+            </div>
+        </form>
+        
+        <form action="register.php" method="POST" id="register-form" class="hidden">
+            <input type="fullname" name="fullname" placeholder="Full Name" required/>
+            <input type="email" name="email" placeholder="Email" required/>
+            <input type="password" name="password" placeholder="Password" required/>
+            <input type="password" name="confirm_password" placeholder="Confirm Password" required/>
+            <a href="Login.html">
+            <button type="submit" name="register">Register</button>
+            </a>
+            <div class="switch-container">
+                <p>Already have an account? </p><p class="switch" onclick="switchForm('login')"> Log In</p>
+            </div>
+        </form>
+    </div>
+    <div class="image-box">
+        <img src="asset/login.png" alt="Indonesia High Speed Railway"/>
+    </div>
+</div>
+
+<script>
+    function switchForm(formType) {
+        if (formType === 'register') {
+            document.getElementById('login-form').classList.add('hidden');
+            document.getElementById('register-form').classList.remove('hidden');
+            document.getElementById('form-title').textContent = 'Register';
+        } else {
+            document.getElementById('register-form').classList.add('hidden');
+            document.getElementById('login-form').classList.remove('hidden');
+            document.getElementById('form-title').textContent = 'Log In';
+        }
+    }
+</script>
+</body>
+</html>

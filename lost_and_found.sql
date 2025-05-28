@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 28 Bulan Mei 2025 pada 07.10
--- Versi server: 10.4.32-MariaDB
--- Versi PHP: 8.2.12
+-- Generation Time: May 28, 2025 at 07:18 AM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `claims`
+-- Table structure for table `claims`
 --
 
 CREATE TABLE `claims` (
@@ -44,7 +44,7 @@ CREATE TABLE `claims` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `claims`
+-- Dumping data for table `claims`
 --
 
 INSERT INTO `claims` (`claim_id`, `passenger_name`, `phone_number`, `id_card_image`, `train_ticket_image`, `item_description`, `proof_of_ownership`, `lost_item_id`, `created_at`, `updated_at`, `metode_pengambilan`, `stasiun_ambil`, `stasiun_kirim`) VALUES
@@ -55,12 +55,13 @@ INSERT INTO `claims` (`claim_id`, `passenger_name`, `phone_number`, `id_card_ima
 (55, 'koko', '082122681865', 'claim/1747024761_aaa.jpg', 'claim/1747024761_aaa.jpg', 'asadsdasda', 'claim/1747024761_aaa.jpg', 10, '2025-05-12 04:39:21', '2025-05-12 04:39:21', 'dikirim', NULL, 'Tegalluar Summarecon'),
 (56, 'ijal', '(+62) 857 8252 4513', 'claim/1747455481_BPJS.jpg', 'claim/1747455481_BPJS.jpg', 'assaas', 'claim/1747455481_BPJS.jpg', 6, '2025-05-17 04:18:01', '2025-05-17 04:18:01', 'ambil', 'Tegalluar Summarecon', NULL),
 (57, 'apisaselole', '82122681865', 'claim/1747455565_a.jpg', 'claim/1747455565_b.jpg', 'asasa', 'claim/1747455565_c.jpg', 9, '2025-05-17 04:19:25', '2025-05-17 04:19:25', 'ambil', 'Tegalluar Summarecon', NULL),
-(58, 'iksan', '08938947892', 'claim/1748407795_Bayi Gajah.jpg', 'claim/1748407795_Bayi Gajah.jpg', 'sudah ditemukan', 'claim/1748407795_with yoan.png', 22, '2025-05-28 04:49:55', '2025-05-28 04:49:55', 'ambil', 'Karawang Station', NULL);
+(58, 'iksan', '08938947892', 'claim/1748407795_Bayi Gajah.jpg', 'claim/1748407795_Bayi Gajah.jpg', 'sudah ditemukan', 'claim/1748407795_with yoan.png', 22, '2025-05-28 04:49:55', '2025-05-28 04:49:55', 'ambil', 'Karawang Station', NULL),
+(59, 'Kevin', '087891273132', 'claim/1748409488_Backgroung censor.png', 'claim/1748409488_Commite of Censor.png', 'barang aman bosq', 'claim/1748409488_alat.jpeg', 23, '2025-05-28 05:18:08', '2025-05-28 05:18:08', 'ambil', 'Tegalluar Summarecon', NULL);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `lost_items`
+-- Table structure for table `lost_items`
 --
 
 CREATE TABLE `lost_items` (
@@ -89,7 +90,7 @@ CREATE TABLE `lost_items` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `lost_items`
+-- Dumping data for table `lost_items`
 --
 
 INSERT INTO `lost_items` (`id`, `no_regist`, `categories`, `date`, `nama_barang`, `location`, `nomor_kereta`, `gerbong`, `kursi`, `nama_pelapor`, `reporter`, `chronology`, `image`, `status`, `created_at`, `perilis`, `tanggal_rilis`, `foto_rilis`, `metode_pengambilan`, `stasiun_ambil`, `stasiun_kirim`, `status_rilis`) VALUES
@@ -100,12 +101,13 @@ INSERT INTO `lost_items` (`id`, `no_regist`, `categories`, `date`, `nama_barang`
 (11, 'P-1130', 'FnB', '2025-03-29', 'Bakpia Tugu', 'Padalarang Station', '', '', '', 'Fatur', 'Security', 'Barang di temukan di waiting hall', 'uploads/Bakpia.jpg', 'claimed', '2025-04-18 03:40:16', 'lea', '2025-05-09', 'rilis_uploads/1746888166_1746678027_release.jpg', NULL, NULL, NULL, 'rilis'),
 (13, 'T-1234', 'Electronic', '2025-03-30', 'AirPods Max', 'Tegalluar Summarecon', '', '', '', 'Kevin', 'Security', 'Barang ditemukan di toilet waiting hall lantai 3', 'uploads/0788-APPMWW53ID-A-.jpg', 'unclaimed', '2025-04-03 03:40:16', 'lea', '2025-05-09', 'rilis_uploads/1746886796_1746678027_release.jpg', 'dikirim', NULL, 'Tegalluar Summarecon', 'belum rilis'),
 (14, 'H-1133', 'Accessories', '2025-03-28', 'Rolex Watch', 'Halim Station', '', '', '', 'Nanda', 'Security', 'Barang ditemukan di toilet pria ', 'uploads/RolexDate.png', 'claimed', '2025-04-04 03:40:16', 'lea', '2025-05-09', 'rilis_uploads/1746866053_1746678027_release.jpg', 'ambil', 'Halim Station', NULL, 'rilis'),
-(22, '0121', 'Bag', '2025-05-30', 'hp', 'Halim Station', 'g8099', '2', '12 A', 'joni', 'PSAP', 'hilang ditelan', 'uploads/animepoik.png', 'claimed', '2025-05-28 04:48:45', 'sena', '2025-05-31', 'rilis_uploads/1748407836_Logo-WIKA.png', NULL, NULL, NULL, 'rilis');
+(22, '0121', 'Bag', '2025-05-30', 'hp', 'Halim Station', 'g8099', '2', '12 A', 'joni', 'PSAP', 'hilang ditelan', 'uploads/animepoik.png', 'claimed', '2025-05-28 04:48:45', 'sena', '2025-05-31', 'rilis_uploads/1748407836_Logo-WIKA.png', NULL, NULL, NULL, 'rilis'),
+(23, 'T-100', 'Phone', '2025-05-28', 'IPhone 20', 'Padalarang Station', '', '', '', 'Nanda', 'PSAP', 'hilang dikantong', 'uploads/WhatsApp Image 2024-06-12 at 12.29.20_0d494110.jpg', 'claimed', '2025-05-28 05:17:18', 'Nanda', '2025-05-28', 'rilis_uploads/1748409507_1.jpg', NULL, NULL, NULL, 'rilis');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `lost_report`
+-- Table structure for table `lost_report`
 --
 
 CREATE TABLE `lost_report` (
@@ -122,7 +124,7 @@ CREATE TABLE `lost_report` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `lost_report`
+-- Dumping data for table `lost_report`
 --
 
 INSERT INTO `lost_report` (`nama_pelapor`, `kontak`, `id`, `nama_barang`, `ciri_ciri`, `lokasi_kehilangan`, `kronologi`, `tanggal`, `created_at`, `status`) VALUES
@@ -137,7 +139,7 @@ INSERT INTO `lost_report` (`nama_pelapor`, `kontak`, `id`, `nama_barang`, `ciri_
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
@@ -154,7 +156,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `users`
+-- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `fullname`, `username`, `email`, `password`, `position`, `departement`, `biro`, `placement`, `profile_pic`) VALUES
@@ -173,64 +175,64 @@ INSERT INTO `users` (`id`, `fullname`, `username`, `email`, `password`, `positio
 --
 
 --
--- Indeks untuk tabel `claims`
+-- Indexes for table `claims`
 --
 ALTER TABLE `claims`
   ADD PRIMARY KEY (`claim_id`),
   ADD KEY `lost_item_id` (`lost_item_id`);
 
 --
--- Indeks untuk tabel `lost_items`
+-- Indexes for table `lost_items`
 --
 ALTER TABLE `lost_items`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `lost_report`
+-- Indexes for table `lost_report`
 --
 ALTER TABLE `lost_report`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `users`
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `claims`
+-- AUTO_INCREMENT for table `claims`
 --
 ALTER TABLE `claims`
-  MODIFY `claim_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
+  MODIFY `claim_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 
 --
--- AUTO_INCREMENT untuk tabel `lost_items`
+-- AUTO_INCREMENT for table `lost_items`
 --
 ALTER TABLE `lost_items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
--- AUTO_INCREMENT untuk tabel `lost_report`
+-- AUTO_INCREMENT for table `lost_report`
 --
 ALTER TABLE `lost_report`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- AUTO_INCREMENT untuk tabel `users`
+-- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
+-- Constraints for dumped tables
 --
 
 --
--- Ketidakleluasaan untuk tabel `claims`
+-- Constraints for table `claims`
 --
 ALTER TABLE `claims`
   ADD CONSTRAINT `claims_ibfk_1` FOREIGN KEY (`lost_item_id`) REFERENCES `lost_items` (`id`) ON DELETE CASCADE;

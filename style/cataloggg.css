@@ -101,8 +101,7 @@ body h1 {
 .header .search {
     display: flex;
     align-items: center;
-    cursor: pointer; 
-
+    cursor: pointer;
 }
 
 .header .search input {
@@ -113,7 +112,7 @@ body h1 {
     outline: none;
     font-size: 14px;
     width: 220px;
-    color: #7F0408;
+    color: #4A0000;
     background-color: #F5F7FA;
     transition: 0.3s;
 }
@@ -124,6 +123,7 @@ body h1 {
     border-radius: 50%;
     margin-right: 100px;
 }
+
 .filter-bar {
     display: flex;
     justify-content: space-between;
@@ -138,13 +138,13 @@ body h1 {
     margin-bottom: 20px;
     margin-left: 25px;
     margin-right: 25px;
-            }
+}
 
 .filter-options {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
-            }
+}
 
 .filter-options label select {
     padding: 0.5rem 1rem;
@@ -154,12 +154,12 @@ body h1 {
     font-size: 0.9rem;
     transition: all 0.3s ease;
     cursor: pointer;
-    }
+}
 
 .filter-options label select:hover {
-    border-color:rgb(248, 1, 1);
+    border-color: rgb(248, 1, 1);
     box-shadow: 0 0 0 2px rgba(90, 103, 216, 0.2);
-    }
+}
 
 .filter-options select:focus {
     outline: none;
@@ -188,9 +188,12 @@ body h1 {
 .add-catalog i {
     font-size: 14px;
 }
-.catalog {    flex-direction: column;
+
+.catalog {
+    flex-direction: column;
     gap: 15px;
 }
+
 .catalog-list {
     background-color: #ffffff;
     border-radius: 10px;
@@ -198,66 +201,75 @@ body h1 {
     margin-left: 25px;
     margin-right: 25px;
     gap: 20px;
+}
 
-}
 .catalog-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  background-color: #ffffff;
-  border-radius: 30px;
-  box-shadow: 0 2px 50px rgba(0, 0, 0, 0.1);
-  gap: 10px;
-  margin-bottom: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 30px;
+    box-shadow: 0 2px 50px rgba(0, 0, 0, 0.1);
+    gap: 10px;
+    margin-bottom: 3px;
 }
+
 .catalog-item .item-actions .unclaimed {
-background-color:rgb(153, 31, 27) !important;
-color: #fff !important;
-font-weight: bold;
-padding: 5px 10px;
-border-radius: 5px;
-text-transform: uppercase;
+    background-color: #a30d0a !important;
+    color: #fff !important;
+    font-weight: 700;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-transform: uppercase;
 }
 
 .catalog-item .item-actions .claimed {
-background-color:rgb(16, 104, 16) !important;
-color: #fff !important;
-font-weight: bold;
-padding: 5px 10px;
-border-radius: 5px;
-text-transform: uppercase;
+    background-color: #0b640b !important;
+    color: #fff !important;
+    font-weight: 700;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-transform: uppercase;
 }
+
 .catalog-item:last-child {
     border-bottom: none;
 }
+
 .catalog-item img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     margin-right: 10px;
 }
+
 .catalog-item .item-info {
     display: flex;
     align-items: center;
     gap: 15px;
 }
+
 .catalog-item .item-info div {
     margin-right: 50px;
 }
+
 .catalog-item .item-info div span {
     display: block;
     font-size: 14px;
-    color: #888;
+    color: #555;
 }
+
 .catalog-item .item-info div strong {
     font-size: 16px;
     color: #333;
 }
+
 .catalog-item .item-actions {
     display: flex;
     align-items: center;
 }
+
 .catalog-item .item-actions button {
     padding: 5px 10px;
     border: none;
@@ -266,7 +278,7 @@ text-transform: uppercase;
 }
 
 .catalog-item .item-actions i {
-    color: #888;
+    color: #666;
     cursor: pointer;
 }
 
@@ -284,10 +296,8 @@ text-transform: uppercase;
     transition: background-color 0.3s ease;
     margin-bottom: 5px;
     font-family: 'Inter', sans-serif;
-
 }
 
 .claim-form:hover {
     background-color: #8b0000;
 }
-
